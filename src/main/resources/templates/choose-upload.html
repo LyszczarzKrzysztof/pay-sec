@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8" lang="pl">
+  <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.1.1/css/bootstrap.min.css}"/>
+  <link rel="stylesheet" th:href="@{/main.css}"/>
+  <meta charset="UTF-8">
+  <title>choose</title>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col" th:text="${constant}">
+      Column
+    </div>
+    <div class="col" >
+      Column
+    </div>
+  </div>
+</div>
+
+<form method="post"  enctype="multipart/form-data">
+  <div class="form-group">
+    <input type="file" name="file" class="form-control-file">
+  </div>
+  <button class="btn btn-primary" type="submit">Upload</button>
+<!--  <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>-->
+</form>
+
+
+
+
+
+</body>
+</html>

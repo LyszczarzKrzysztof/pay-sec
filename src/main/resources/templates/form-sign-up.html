@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" lang="pl">
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.1.1/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/main.css}"/>
+    <title>Form Sign In</title>
+</head>
+<body>
+
+<body>
+
+
+<div class="modal modal-signin position-static d-block bg-secondary py-5" tabindex="-1" role="dialog" id="modalSignin">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content rounded-5 shadow">
+<!--            <div class="modal-header p-5 pb-4 border-bottom-0">-->
+<!--                &lt;!&ndash; <h5 class="modal-title">Modal title</h5> &ndash;&gt;-->
+<!--                <h2 class="fw-bold mb-0">Sign up for free</h2>-->
+<!--                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+<!--            </div>-->
+
+            <div class="modal-body p-5 pt-0">
+                <form method="post" th:object="${form}">
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control rounded-4" id="floatingInputSecondName" placeholder="username"
+                        th:field="*{username}">
+                        <label for="floatingInput">Username</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com"
+                        th:field="*{email}">
+                        <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password"
+                        th:field="*{password}">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+                    <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Sign up</button>
+                    <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+                    <hr class="my-4">
+                    <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+                    <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" type="submit">
+                        <svg class="bi me-1" width="16" height="16"><use xlink:href="#github"></use></svg>
+                        Sign up with GitHub
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="b-example-divider"></div>
+
+
+<script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+
+
+</body>
+
+</body>
+</html>
